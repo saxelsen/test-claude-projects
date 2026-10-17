@@ -2,8 +2,9 @@
 
 A small static site listing food recipes. No build step or dependencies.
 
-All recipes are by Christian Duffau-Rasmussen, originally published at
-<https://duffau.github.io/recipes/>. Each recipe page credits him and links to the original.
+All recipes are by Christian Duffau-Rasmussen, translated into English from the Danish
+originals published at <https://duffau.github.io/recipes/>. Each recipe page credits him
+and links to the original.
 
 - `index.html` – page shell
 - `recipes.js` – recipe data (add a recipe by adding an object to `RECIPES`; ingredients and steps are lists of `{ title?, items, note? }` groups)

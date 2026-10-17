@@ -125,7 +125,7 @@
         }
       </div>
       <p class="source">
-        Recipe by ${escape(AUTHOR.name)}. Originally published at
+        Recipe by ${escape(AUTHOR.name)}, translated from the Danish original at
         <a href="${escape(recipe.url)}" target="_blank" rel="noopener">${escape(decodeURI(recipe.url))}</a>.
       </p>`;
   }

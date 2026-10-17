@@ -1,8 +1,10 @@
 // Recipe data. Add a new object to this array to add a recipe to the site.
-// All recipes are by Christian Duffau-Rasmussen, from https://duffau.github.io/recipes/
+// All recipes are by Christian Duffau-Rasmussen, translated from the Danish
+// originals at https://duffau.github.io/recipes/
 //
 // `ingredients` and `steps` are lists of groups: { title?, items, note? }.
 // `serves`, `credits` (the original inspiration) and `intro` are optional.
+// Stove settings like "6 out of 9" refer to a hob dial that goes up to 9.
 const AUTHOR = {
   name: "Christian Duffau-Rasmussen",
   url: "https://duffau.github.io/recipes/"
@@ -11,23 +13,23 @@ const AUTHOR = {
 const RECIPES = [
   {
     id: "smashed-cucumber",
-    title: "‘Smashed Cucumber’ Salat",
+    title: "Smashed Cucumber Salad",
     emoji: "🥒",
-    category: "Salater",
+    category: "Salads",
     serves: "4",
     url: "https://duffau.github.io/recipes/smashed-cucumber",
     ingredients: [
       {
         items: [
-          "2 stk agurk (~500g)",
-          "2.5 tsk. sukker",
-          "2 tsk. sesamolie",
-          "3 tsk. lys sojasovs",
-          "1.5 spsk. risvineddike",
-          "2-4 fed hvidløg (finthakket)",
-          "1-2 tsk. chilolie (valgfrit)",
-          "2 tsk. ristede sesamfrø",
-          "en lille håndfuld hakket koriander"
+          "2 cucumbers (~500 g)",
+          "2.5 tsp sugar",
+          "2 tsp sesame oil",
+          "3 tsp light soy sauce",
+          "1.5 tbsp rice vinegar",
+          "2-4 garlic cloves (finely chopped)",
+          "1-2 tsp chili oil (optional)",
+          "2 tsp toasted sesame seeds",
+          "A small handful of chopped cilantro"
         ]
       }
     ],
@@ -35,131 +37,131 @@ const RECIPES = [
       {
         title: "Dressing",
         items: [
-          "Bland sukker, sesamolie, sojasovs og risvineddike i en stor skål",
-          "Pisk til sukker er opløst"
+          "Combine the sugar, sesame oil, soy sauce and rice vinegar in a large bowl",
+          "Whisk until the sugar has dissolved"
         ]
       },
       {
-        title: "Agurk",
+        title: "Cucumber",
         items: [
-          "Hak hvidløg fint",
-          "Knus agurker med bagsiden af en tung kniv eller en kødhammer",
-          "Hak agurk i ujævne stykker af 2-5 cm",
-          "Placer agurk og hvidløg i stor skål med dressing",
-          "Vend agurk i dressing"
+          "Finely chop the garlic",
+          "Smash the cucumbers with the flat of a heavy knife or a meat mallet",
+          "Chop the cucumber into uneven 2-5 cm pieces",
+          "Put the cucumber and garlic in the large bowl with the dressing",
+          "Toss the cucumber in the dressing"
         ]
       },
       {
-        title: "Anret",
+        title: "To serve",
         items: [
-          "Anret knuste agurker på et fad",
-          "Drys ristede sesamfrø ud over"
+          "Arrange the smashed cucumbers on a platter",
+          "Sprinkle the toasted sesame seeds over the top"
         ]
       }
     ]
   },
   {
     id: "romaine-salat",
-    title: "Romaine Salat i Hvidløg-sojasauce",
+    title: "Romaine Lettuce in Garlic-Soy Sauce",
     emoji: "🥬",
-    category: "Salater",
+    category: "Salads",
     url: "https://duffau.github.io/recipes/romaine-salat-i-hvidløgssauce",
     credits: ["Kenji Lopez-Alt – Too Much Romaine? Try This Chinese Recipe (Kenji’s Cooking Show)"],
     ingredients: [
       {
         items: [
-          "1 stk romaine salathoved eller 3 stk. hjertesalathoveder",
-          "4-5 fed hvidløg",
-          "2 spsk. Østerssauce",
-          "1 spsk. Sojasauce"
+          "1 head of romaine lettuce or 3 little gem lettuces",
+          "4-5 garlic cloves",
+          "2 tbsp oyster sauce",
+          "1 tbsp soy sauce"
         ]
       }
     ],
     steps: [
       {
-        title: "Prep.",
+        title: "Prep",
         items: [
-          "Del salat i hele blade og skyl",
-          "Hak hvidløg fint",
-          "Sæt en gryde, sauterpande eller wok over med 1% salt/vand opløsning"
+          "Separate the lettuce into whole leaves and rinse",
+          "Finely chop the garlic",
+          "Bring a pot, sauté pan or wok of 1% salted water to the boil"
         ]
       },
       {
         title: "Sauce",
         items: [
-          "Varm olie op i en lille gryde",
-          "Steg hvidløg ved middelhøj varme (7 ud af 9) i 3-4 min (lad ikke brune)",
-          "Tilsæt sojasauce og østerssauce",
-          "Tilsæt 3 spsk. saltet vand"
+          "Heat some oil in a small pot",
+          "Fry the garlic over medium-high heat (7 out of 9) for 3-4 min (don’t let it brown)",
+          "Add the soy sauce and oyster sauce",
+          "Add 3 tbsp of the salted water"
         ]
       },
       {
-        title: "Blancher salat",
-        items: ["Lad de hele salatblade tilberede i 20-30 sek. i kogende vand"]
+        title: "Blanch the lettuce",
+        items: ["Cook the whole lettuce leaves in the boiling water for 20-30 seconds"]
       },
       {
-        title: "Anretning",
+        title: "To serve",
         items: [
-          "Tag salat op af kogende vand",
-          "Anret på fad",
-          "Hæld soja-hvidløgsauce ud over salat"
+          "Lift the lettuce out of the boiling water",
+          "Arrange on a platter",
+          "Pour the garlic-soy sauce over the lettuce"
         ]
       }
     ]
   },
   {
     id: "spidskaal-parmesancreme",
-    title: "Spidskål med Parmesancreme",
+    title: "Roasted Pointed Cabbage with Parmesan Cream",
     emoji: "🥬",
-    category: "Salater",
+    category: "Salads",
     serves: "3-4",
     url: "https://duffau.github.io/recipes/spidskaal-med-parmesan-creme",
     ingredients: [
       {
         items: [
-          "1 Spidskål",
-          "200g Cremefraiche 18%",
-          "50g Parmesan",
-          "1 Citron (uden overfladebehandling)",
-          "3 spsk Olivenolie",
+          "1 pointed (sweetheart) cabbage",
+          "200 g crème fraîche 18%",
+          "50 g Parmesan",
+          "1 unwaxed lemon",
+          "3 tbsp olive oil",
           "Salt",
-          "Sort peber",
-          "Persille"
+          "Black pepper",
+          "Parsley"
         ]
       }
     ],
     steps: [
       {
-        title: "Prep. spidskål",
+        title: "Prep the cabbage",
         items: [
-          "Fjern yderste blade",
-          "Skær nederste af stilken fra",
-          "Skær spidskål i 6-8 både"
+          "Remove the outermost leaves",
+          "Trim off the bottom of the stem",
+          "Cut the cabbage into 6-8 wedges"
         ]
       },
       {
-        title: "Prep. parmesancreme",
+        title: "Prep the Parmesan cream",
         items: [
-          "Riv parmesan fint",
-          "Riv citronskal fra en 1/2 citron",
-          "Rør creme fraiche sammen med parmesan, citronskal, 1 spsk olivenolie og saft fra 1/2 citron",
-          "Smag til med salt, peber og citronsaft"
+          "Finely grate the Parmesan",
+          "Grate the zest from 1/2 lemon",
+          "Stir the crème fraîche together with the Parmesan, lemon zest, 1 tbsp olive oil and the juice of 1/2 lemon",
+          "Season to taste with salt, pepper and lemon juice"
         ]
       },
       {
-        title: "Bag spidskål",
+        title: "Roast the cabbage",
         items: [
-          "Læg på bageplade",
-          "Smør ind i 2 spsk olivenolie",
-          "Bag ved 200 grader i 30-45 minutter til mør"
+          "Place on a baking tray",
+          "Brush with 2 tbsp olive oil",
+          "Roast at 200 °C for 30-45 minutes until tender"
         ]
       },
       {
-        title: "Anret",
+        title: "To serve",
         items: [
-          "Smør parmesancreme ud på et fad",
-          "Læg bagte spidskål ovenpå",
-          "Drys revet citronskal og hakket persille ud over"
+          "Spread the Parmesan cream on a platter",
+          "Place the roasted cabbage on top",
+          "Sprinkle with grated lemon zest and chopped parsley"
         ]
       }
     ]
@@ -174,75 +176,75 @@ const RECIPES = [
     ingredients: [
       {
         items: [
-          "400g Hakket svinekød min. 12% fedt",
-          "400g Hakket oksekød min. 12% fedt",
-          "2 Store løg",
-          "2 Stænger Bladselleri",
-          "2 Store Gulerødder",
-          "6 fed Hvidløg",
-          "2 Dåser (800g) Flåede tomater",
-          "2 glas Hvidvin (~30 cl)",
-          "1 stængel frisk Rosmarin",
-          "4 stængler frisk Timian",
-          "4 Laurbærblade (tørret)",
-          "2 Stk Stjerneanis",
+          "400 g ground pork, min. 12% fat",
+          "400 g ground beef, min. 12% fat",
+          "2 large onions",
+          "2 celery stalks",
+          "2 large carrots",
+          "6 garlic cloves",
+          "2 cans (800 g) whole peeled tomatoes",
+          "2 glasses white wine (~30 cl)",
+          "1 sprig fresh rosemary",
+          "4 sprigs fresh thyme",
+          "4 bay leaves (dried)",
+          "2 star anise",
           "100 g Parmesan",
           "Salt",
-          "Peber",
-          "Sukker",
-          "Eddike"
+          "Pepper",
+          "Sugar",
+          "Vinegar"
         ]
       }
     ],
     steps: [
       {
-        title: "Prep.",
+        title: "Prep",
         items: [
-          "Med et groft rivejern, riv løg, bladselleri og gulerod",
-          "Hak hvidløg fint",
-          "Rør svinekød og oksekød sammen",
-          "Lav 10-12 klumper kødfars for nemmere bruning",
-          "Riv Parmesan fint"
+          "Using a coarse grater, grate the onion, celery and carrot",
+          "Finely chop the garlic",
+          "Mix the pork and beef together",
+          "Form the mince into 10-12 lumps for easier browning",
+          "Finely grate the Parmesan"
         ]
       },
       {
         title: "Sauce",
         items: [
-          "Varm 8 spsk olivenolie op i en gryde som kan gå i ovnen med låg",
-          "Steg små klumper af kødfars af på middel varme (6 ud af 9). Behøver ikke blive gennemstegt, men bør brune godt på mindst en side. Tilsæt salt og peber til hvert batch.",
-          "Tag stegt fars op i en skål",
-          "Steg hakkede grøntsager i olien ved middel varme (6 ud af 9). Tilsæt salt og peber. Steg til løg er gennemsigtige og grøntsagerne er møre.",
-          "Hæld hvidvin på, og skrab brændte kødrester fri fra bunden af panden",
-          "Hæld flåede tomater på og mos dem med en ske",
-          "Kom kød tilbage i gryden",
-          "Tilsæt aromater: rosmarin, timian, laurbærblade og stjerneanis",
-          "Sæt gryde med låg i ovnen ved 150-160 grader over/under varme",
-          "Lad simre i 30 min til 5 timer – desto længere desto bedre",
-          "Tag ud af ovnen",
-          "Smag til med salt, sukker og god eddike"
+          "Heat 8 tbsp olive oil in an ovenproof pot with a lid",
+          "Fry small lumps of the mince over medium heat (6 out of 9). They don’t need to be cooked through, but should brown well on at least one side. Season each batch with salt and pepper.",
+          "Transfer the browned mince to a bowl",
+          "Fry the grated vegetables in the oil over medium heat (6 out of 9). Season with salt and pepper. Cook until the onions are translucent and the vegetables are tender.",
+          "Pour in the white wine and scrape the browned bits from the bottom of the pot",
+          "Add the peeled tomatoes and crush them with a spoon",
+          "Return the meat to the pot",
+          "Add the aromatics: rosemary, thyme, bay leaves and star anise",
+          "Put the lid on and place the pot in the oven at 150-160 °C (conventional heat)",
+          "Let it simmer for 30 minutes to 5 hours – the longer the better",
+          "Take it out of the oven",
+          "Season to taste with salt, sugar and a good vinegar"
         ]
       },
       {
-        title: "Kog pasta",
+        title: "Cook the pasta",
         items: [
-          "Sæt vand over med 1% salt. Dvs. 1 liter vand 10 g salt.",
-          "Kog pastaen 2 minutter mindre end hvad der står på pakken",
-          "Tag 100-200 ml pastakogevand fra",
-          "Dræn pasta"
+          "Bring water with 1% salt to the boil, i.e. 10 g salt per litre of water.",
+          "Cook the pasta 2 minutes less than the packet says",
+          "Reserve 100-200 ml of pasta water",
+          "Drain the pasta"
         ]
       },
       {
-        title: "Samle retten",
+        title: "Bring it together",
         items: [
-          "Overfør pastaen til en stor sauterpande",
-          "Vend pastaen rundt i saucen i sauterpanden",
-          "Tilsæt 4-6 spsk. pastavand for at jævne saucen",
-          "Lad sauce og pasta simre i 1-2 min under omrøring",
-          "Er saucen for tør tilsæt mere pastavand",
-          "Sluk for blusset",
-          "Tilsæt revet parmesan og rør til den er smeltet ud i saucen",
-          "Tilsæt 2-3 spsk olivenolie og rør rundt",
-          "Server med revet parmesan ovenpå"
+          "Transfer the pasta to a large sauté pan",
+          "Toss the pasta in the sauce in the sauté pan",
+          "Add 4-6 tbsp pasta water to loosen the sauce",
+          "Let the sauce and pasta simmer for 1-2 min, stirring",
+          "If the sauce is too dry, add more pasta water",
+          "Turn off the heat",
+          "Add the grated Parmesan and stir until it has melted into the sauce",
+          "Add 2-3 tbsp olive oil and stir",
+          "Serve topped with grated Parmesan"
         ]
       }
     ]
@@ -255,63 +257,63 @@ const RECIPES = [
     serves: "4",
     url: "https://duffau.github.io/recipes/pasta-pesto-genovese/",
     intro: [
-      "Det bedste resultat opnås ved at bruge en morter. At knuse basilikumbladene udløser flere aromastoffer, da langt flere cellevægge bliver ødelagt, sammenlignet med en blendet version."
+      "The best result comes from using a mortar and pestle. Crushing the basil leaves releases more aromatic compounds, because far more cell walls are broken than in a blended version."
     ],
     ingredients: [
       {
         items: [
-          "400g Linguine/Bucatini/Spaghettoni/Spaghetti",
-          "1 plante Basilikum 10-15 cm",
-          "1 fed hvidløg afskallet",
-          "40 g Pinjekerner",
+          "400 g linguine/bucatini/spaghettoni/spaghetti",
+          "1 basil plant, 10-15 cm",
+          "1 garlic clove, peeled",
+          "40 g pine nuts",
           "50 g Parmesan",
-          "Ekstra Jomfru Olivenolie",
-          "Groft salt",
-          "Sort peber"
+          "Extra virgin olive oil",
+          "Coarse salt",
+          "Black pepper"
         ]
       }
     ],
     steps: [
       {
-        title: "Prep.",
+        title: "Prep",
         items: [
-          "Skyl og pluk basilikumblade",
-          "Afskal hvidløg og hak groft",
-          "Riv parmesan meget fint"
+          "Rinse and pick the basil leaves",
+          "Peel and roughly chop the garlic",
+          "Grate the Parmesan very finely"
         ]
       },
       {
-        title: "Pesto i morter",
+        title: "Pesto in a mortar",
         items: [
-          "Kom basilikumblade og lidt groft salt i en morter",
-          "Knus basilikumblade til en mos",
-          "Tilsæt og mos hvidløg",
-          "Tilsæt og mos pinjekerner",
-          "Tilsæt fint revet Parmesan",
-          "Tilsæt olivenolie og rør homogen",
-          "Konsistensen skal være lind",
-          "Smag til med sort peber"
+          "Put the basil leaves and a little coarse salt in a mortar",
+          "Crush the basil leaves to a paste",
+          "Add the garlic and crush",
+          "Add the pine nuts and crush",
+          "Add the finely grated Parmesan",
+          "Add olive oil and stir until smooth",
+          "The consistency should be loose",
+          "Season with black pepper"
         ]
       },
       {
-        title: "Kog pasta",
+        title: "Cook the pasta",
         items: [
-          "Sæt vand over med 1% salt. Dvs. 1 liter vand 10 g salt.",
-          "Kog pastaen 2 minutter mindre end hvad der står på pakken",
-          "Tag 100-200 ml pastakogevand fra",
-          "Dræn pasta"
+          "Bring water with 1% salt to the boil, i.e. 10 g salt per litre of water.",
+          "Cook the pasta 2 minutes less than the packet says",
+          "Reserve 100-200 ml of pasta water",
+          "Drain the pasta"
         ]
       },
       {
-        title: "Samle retten",
+        title: "Bring it together",
         items: [
-          "Kom pesto i en stor plastikskål (plastik taber mindre varme)",
-          "Vend pastaen rundt i skålen",
-          "Tilsæt 3 spsk. pastavand for at skabe en jævnet pestosauce",
-          "Rør rundt indtil saucen samler sig",
-          "Er saucen for tør tilsæt mere pastavand",
-          "Smag til med salt, peber og evt. citronsaft",
-          "Server med revet parmesan ovenpå"
+          "Put the pesto in a large plastic bowl (plastic loses less heat)",
+          "Toss the pasta in the bowl",
+          "Add 3 tbsp pasta water to make a smooth pesto sauce",
+          "Stir until the sauce comes together",
+          "If the sauce is too dry, add more pasta water",
+          "Season to taste with salt, pepper and perhaps some lemon juice",
+          "Serve topped with grated Parmesan"
         ]
       }
     ]
@@ -326,72 +328,72 @@ const RECIPES = [
     ingredients: [
       {
         items: [
-          "200g Hakket svinekød min. 12% fedt",
-          "200g Fersk Salsiccia naturel pølse (kan erstattes med hakket svinekød)",
-          "1 Stort løg",
-          "1 Stang Bladselleri",
-          "1 Stor gulerod",
-          "3 fed hvidløg",
-          "1 Citron",
-          "1 stængel frisk Rosmarin",
-          "1 glas hvidvin (~15 cl)",
+          "200 g ground pork, min. 12% fat",
+          "200 g fresh plain salsiccia sausage (can be replaced with ground pork)",
+          "1 large onion",
+          "1 celery stalk",
+          "1 large carrot",
+          "3 garlic cloves",
+          "1 lemon",
+          "1 sprig fresh rosemary",
+          "1 glass white wine (~15 cl)",
           "50 g Parmesan",
-          "125 ml Piskefløde"
+          "125 ml heavy cream"
         ]
       }
     ],
     steps: [
       {
-        title: "Prep.",
+        title: "Prep",
         items: [
-          "Med et fint rivejern, riv skrællen af en halv citron",
-          "Hak løg, bladselleri, gulerod og hvidløg i foodprocessor eller i små tern med kniv",
-          "Hak rosmarin helt fint",
-          "Riv parmesan på fint rivejern",
-          "Rør svinekød og fars fra Salsiccia sammen med sort peber, rosmarin og citronskal"
+          "Using a fine grater, grate the zest of half a lemon",
+          "Chop the onion, celery, carrot and garlic in a food processor or into small dice with a knife",
+          "Chop the rosemary very finely",
+          "Grate the Parmesan on a fine grater",
+          "Mix the ground pork and the salsiccia meat with black pepper, the rosemary and the lemon zest"
         ]
       },
       {
         title: "Sauce",
         items: [
-          "Varm 4 spsk olivenolie op i sauterpande",
-          "Steg kødfars af på middel varme (6 ud af 9) i små “klumper”. Behøver ikke blive gennemstegt, men bør brune godt på mindst en side. Tilsæt salt til hvert batch.",
-          "Tag stegt fars op i en skål",
-          "Steg hakkede grøntsager i olien ved middel varme (6 ud af 9). Tilsæt salt og peber. Steg til løg er gennemsigtige og grøntsagerne er møre.",
-          "Hæld hvidvin på, og skrab brændte kødrester fri fra bunden af panden",
-          "Hæld piskefløde på",
-          "Lad simre i 10-30 min"
+          "Heat 4 tbsp olive oil in a sauté pan",
+          "Fry the mince over medium heat (6 out of 9) in small “lumps”. It doesn’t need to be cooked through, but should brown well on at least one side. Salt each batch.",
+          "Transfer the browned mince to a bowl",
+          "Fry the chopped vegetables in the oil over medium heat (6 out of 9). Season with salt and pepper. Cook until the onions are translucent and the vegetables are tender.",
+          "Pour in the white wine and scrape the browned bits from the bottom of the pan",
+          "Pour in the cream",
+          "Let it simmer for 10-30 min"
         ]
       },
       {
-        title: "Kog pasta",
+        title: "Cook the pasta",
         items: [
-          "Sæt vand over med 1% salt. Dvs. 1 liter vand 10 g salt.",
-          "Kog pastaen 2 minutter mindre end hvad der står på pakken",
-          "Tag 100-200 ml pastakogevand fra",
-          "Dræn pasta"
+          "Bring water with 1% salt to the boil, i.e. 10 g salt per litre of water.",
+          "Cook the pasta 2 minutes less than the packet says",
+          "Reserve 100-200 ml of pasta water",
+          "Drain the pasta"
         ]
       },
       {
-        title: "Samle retten",
+        title: "Bring it together",
         items: [
-          "Vend pastaen rundt i saucen i sauterpanden",
-          "Tilsæt eventuelt lidt fløde",
-          "Tilsæt 2-3 spsk. pastavand for at jævne saucen",
-          "Lad sauce og pasta simre i 1-2 min under omrøring",
-          "Er saucen for tør tilsæt mere pastavand",
-          "Sluk for blusset",
-          "Tilsæt revet parmesan og rør til den er smeltet ud i saucen",
-          "Tilsæt saft fra en halv citron",
-          "Smag til med salt, peber og citron",
-          "Server med revet parmesan ovenpå"
+          "Toss the pasta in the sauce in the sauté pan",
+          "Add a little more cream if you like",
+          "Add 2-3 tbsp pasta water to loosen the sauce",
+          "Let the sauce and pasta simmer for 1-2 min, stirring",
+          "If the sauce is too dry, add more pasta water",
+          "Turn off the heat",
+          "Add the grated Parmesan and stir until it has melted into the sauce",
+          "Add the juice of half a lemon",
+          "Season to taste with salt, pepper and lemon",
+          "Serve topped with grated Parmesan"
         ]
       }
     ]
   },
   {
     id: "pasta-alla-norcina",
-    title: "Pasta Alla Norcina",
+    title: "Pasta alla Norcina",
     emoji: "🍄",
     category: "Pasta",
     serves: "6",
@@ -400,59 +402,59 @@ const RECIPES = [
     ingredients: [
       {
         items: [
-          "230g Hakket svinekød (20-30% fedt hvis muligt)",
-          "450g Orecchiette pasta (kan substitueres med Conchiglie eller Mezzi Rigatoni)",
-          "230g Brune champignon (eller anden svamp)",
-          "180g Piskefløde",
-          "120ml Hvidvin",
-          "45g Pecorino romano",
-          "7 tsk Olivenolie",
-          "3 fed Hvidløg",
-          "3 spsk Frisk Persille",
-          "1,25 tsk Frisk rosmarin",
-          "1 spsk Citronsaft",
-          "1/8 tsk Natron",
+          "230 g ground pork (20-30% fat if possible)",
+          "450 g orecchiette pasta (can be replaced with conchiglie or mezzi rigatoni)",
+          "230 g cremini mushrooms (or other mushrooms)",
+          "180 g heavy cream",
+          "120 ml white wine",
+          "45 g Pecorino Romano",
+          "7 tsp olive oil",
+          "3 garlic cloves",
+          "3 tbsp fresh parsley",
+          "1.25 tsp fresh rosemary",
+          "1 tbsp lemon juice",
+          "1/8 tsp baking soda",
           "Salt",
-          "Sort peber"
+          "Black pepper"
         ]
       }
     ],
     steps: [
       {
-        title: "Svinefars",
+        title: "Pork",
         items: [
-          "Put 4 spsk vand med 1 tsk salt og 1 tsk bagepulver. Opløs i vandet.",
-          "Bland svinekødet i salt/bagepulver-opløsningen.",
-          "Lad hvile i 10 min.",
-          "Tilsæt fint hakket rosmarin, fint revet eller presset hvidløg og fint revet muskatnød. Rør sammen til godt homogen.",
-          "Lav en tyk hakkebøf af farsen. Varm en pande med lidt olie i bunden og steg farsen hårdt på begge sider. Der skal komme godt med farve uden at det indre bliver tilberedt.",
-          "Når stegt, sæt op på skærebræt og hak i små stykker. Sæt til side i en skål med 1 dl fløde, så trækker smagen ud i fløden."
+          "Mix 4 tbsp water with 1 tsp salt and 1 tsp baking powder until dissolved.",
+          "Mix the pork into the salt/baking powder solution.",
+          "Let it rest for 10 min.",
+          "Add finely chopped rosemary, finely grated or pressed garlic and finely grated nutmeg. Mix until well combined.",
+          "Form the mince into one thick patty. Heat a pan with a little oil and sear the patty hard on both sides. It should get plenty of colour without the inside cooking through.",
+          "Once seared, transfer to a chopping board and chop into small pieces. Set aside in a bowl with 1 dl cream so the flavour seeps into the cream."
         ],
-        note: "Bagepulver er en blanding af natron (natriumbikarbonat), som er basisk, og en syre. Basen højner pH-værdien i kødet, som gør at det holder bedre på fugt og bruner hurtigere."
+        note: "Baking powder is a mix of baking soda (sodium bicarbonate), which is alkaline, and an acid. The alkali raises the pH of the meat, which helps it hold on to moisture and brown faster."
       },
       {
-        title: "Sauce og pasta",
+        title: "Sauce and pasta",
         items: [
-          "Sæt pastavand over. 1% saltopløsning (1.5 tsk per liter) er passende.",
-          "Put champignon op i en blender/minihakker og hak i små stykker.",
-          "Sæt champignon i en sautépande (med høje sider) med vand til det dækker bunden.",
-          "Lad koge til vandet er fordampet. Dette bryder strukturen ned i svampene, så de smider vand og mister deres evne til at suge fedtstof.",
-          "Tilsæt olivenolie i sautépanden, og sautér champignon til de er let brunede.",
-          "Sæt pasta over.",
-          "Når de hakkede champignon har fået farve, tilsæt et glas hvidvin og lad koge helt ind.",
-          "Tilsæt frisk hakket rosmarin og fint hakket hvidløg.",
-          "Hæld fløde + kød op i.",
-          "Lad simre til kødet er tilberedt.",
-          "Skru ned for varmen. Tilsæt en stor håndfuld revet Pecorino Romano.",
-          "Smag til med citronsaft, salt og peber.",
-          "Dræn pasta og kom op i sautépanden med sovsen, og sørg for den er godt coated."
+          "Put the pasta water on. A 1% salt solution (1.5 tsp per litre) is about right.",
+          "Chop the mushrooms into small pieces in a blender or mini chopper.",
+          "Put the mushrooms in a high-sided sauté pan with enough water to cover the bottom.",
+          "Boil until the water has evaporated. This breaks down the structure of the mushrooms so they release their water and lose their ability to soak up fat.",
+          "Add olive oil to the pan and sauté the mushrooms until lightly browned.",
+          "Put the pasta on to cook.",
+          "Once the chopped mushrooms have taken on colour, add a glass of white wine and let it reduce completely.",
+          "Add freshly chopped rosemary and finely chopped garlic.",
+          "Pour in the cream and meat.",
+          "Simmer until the meat is cooked.",
+          "Turn down the heat. Add a large handful of grated Pecorino Romano.",
+          "Season to taste with lemon juice, salt and pepper.",
+          "Drain the pasta, tip it into the sauté pan with the sauce and make sure it’s well coated."
         ]
       }
     ]
   },
   {
     id: "pasta-kaernemaelk-mynte-pistacie",
-    title: "Pasta m. Kærnemælk, mynte og pistacienødder",
+    title: "Pasta with Buttermilk, Mint and Pistachios",
     emoji: "🫛",
     category: "Pasta",
     serves: "4",
@@ -461,71 +463,71 @@ const RECIPES = [
     ingredients: [
       {
         items: [
-          "30 g pistacienødder",
+          "30 g pistachios",
           "400 g pasta",
           "Salt",
-          "400 g ærter (friske eller frosne)",
-          "3 spsk. smør",
-          "2 spsk. ekstra jomfru olivenolie, plus mere til dryp",
-          "2 mellemstore porrer, kun de hvide og lysegrønne dele, skåret i halve på langs, tyndt skåret",
-          "3 hvidløgsfed, tyndt skåret",
-          "½ tsk. knuste røde peberflager",
-          "1 lille bundt mynte, opdelt",
-          "200 ml kærnemælk",
-          "100 g Parmesan, fint revet, plus mere til servering",
-          "Friskkværnet sort peber",
-          "2 spsk. frisk citronsaft"
+          "400 g peas (fresh or frozen)",
+          "3 tbsp butter",
+          "2 tbsp extra virgin olive oil, plus more for drizzling",
+          "2 medium leeks, white and light green parts only, halved lengthwise and thinly sliced",
+          "3 garlic cloves, thinly sliced",
+          "½ tsp crushed red pepper flakes",
+          "1 small bunch of mint, divided",
+          "200 ml buttermilk",
+          "100 g Parmesan, finely grated, plus more for serving",
+          "Freshly ground black pepper",
+          "2 tbsp fresh lemon juice"
         ]
       }
     ],
     steps: [
       {
-        title: "Prep.",
+        title: "Prep",
         items: [
-          "Forvarm ovnen til 175°C.",
-          "Rist pistacienødderne på en bageplade, vend én gang, indtil de er gyldenbrune, 5–8 minutter.",
-          "Lad pistacienødderne afkøle, og knus dem derefter groft med et målebæger eller et glas.",
-          "Rens porrer, halver på langs og skær i tynde skiver"
+          "Preheat the oven to 175 °C.",
+          "Toast the pistachios on a baking tray, turning once, until golden brown, 5–8 minutes.",
+          "Let the pistachios cool, then crush them coarsely with a measuring cup or a glass.",
+          "Clean the leeks, halve lengthwise and slice thinly"
         ]
       },
       {
-        title: "Kog pasta og ærter",
+        title: "Cook the pasta and peas",
         items: [
-          "Sæt vand over med 1% salt. Dvs. 1 liter vand 10 g salt.",
-          "Kog pastaen 2 minutter mindre end hvad der står på pakken",
-          "Tilsæt ærter når der mangler 2 minutter",
-          "Tag 100-200 ml pastakogevand fra",
-          "Dræn pasta og ærter"
+          "Bring water with 1% salt to the boil, i.e. 10 g salt per litre of water.",
+          "Cook the pasta 2 minutes less than the packet says",
+          "Add the peas for the last 2 minutes",
+          "Reserve 100-200 ml of pasta water",
+          "Drain the pasta and peas"
         ]
       },
       {
-        title: "Kærnemælkssauce",
+        title: "Buttermilk sauce",
         items: [
-          "Opvarm smør og 2 spsk. olie i en tykbundet gryde over medium varme (6 ud af 9).",
-          "Steg porrer, hvidløg, røde peberflager og 3 myntegrene under omrøring, indtil porrerne er bløde, men ikke brunede, 6–8 minutter.",
-          "Krydr med salt.",
-          "Tilsæt kærnemælk; bring til simring.",
-          "Tag mynten op og kassér"
+          "Heat the butter and 2 tbsp oil in a heavy-bottomed pot over medium heat (6 out of 9).",
+          "Cook the leeks, garlic, red pepper flakes and 3 mint sprigs, stirring, until the leeks are soft but not browned, 6–8 minutes.",
+          "Season with salt.",
+          "Add the buttermilk and bring to a simmer.",
+          "Remove the mint and discard"
         ]
       },
       {
-        title: "Samle retten",
+        title: "Bring it together",
         items: [
-          "Brug en hulske til at overføre pasta og ærter til porreblandingen.",
-          "Tilsæt 85 g Parmesan.",
-          "Kog under kraftig omrøring og tilsæt lidt pastavand hvis nødvendigt, indtil saucen er cremet og dækker pastaen, ca. 1 minut.",
-          "Krydr med salt og peber.",
-          "Fjern fra varmen; tilsæt citronsaft.",
-          "Riv blade fra de resterende myntegrene, riv over pastaen og vend rundt.",
-          "Fordel pastaen i skåle.",
-          "Top med pistacienødder og Parmesan; dryp med olie."
+          "Use a slotted spoon to transfer the pasta and peas to the leek mixture.",
+          "Add 85 g Parmesan.",
+          "Cook, stirring vigorously and adding a little pasta water if needed, until the sauce is creamy and coats the pasta, about 1 minute.",
+          "Season with salt and pepper.",
+          "Remove from the heat and add the lemon juice.",
+          "Pick the leaves from the remaining mint sprigs, tear them over the pasta and toss.",
+          "Divide the pasta between bowls.",
+          "Top with pistachios and Parmesan, and drizzle with oil."
         ]
       }
     ]
   },
   {
     id: "pasta-tomat-kikaerter",
-    title: "Pasta m. Tomat og kikærter",
+    title: "Pasta with Tomato and Chickpeas",
     emoji: "🍅",
     category: "Pasta",
     serves: "6",
@@ -534,163 +536,163 @@ const RECIPES = [
       {
         items: [
           "600 g pasta",
-          "800 g flåede tomater (fra dåse)",
-          "400 g kikærter (forkogte på dåse)",
-          "3-5 spsk. ekstra jomfru olivenolie",
-          "1 mellemstort løg, fint hakket",
-          "2 hvidløgsfed, fint hakket",
-          "1 lille bundt persille",
-          "1/4 tsk. revet citronskal (skal fra 1/2 citron)",
-          "1 tsk. sukker",
-          "Friskkværnet sort peber",
+          "800 g whole peeled tomatoes (canned)",
+          "400 g chickpeas (canned, pre-cooked)",
+          "3-5 tbsp extra virgin olive oil",
+          "1 medium onion, finely chopped",
+          "2 garlic cloves, finely chopped",
+          "1 small bunch of parsley",
+          "1/4 tsp grated lemon zest (zest of 1/2 lemon)",
+          "1 tsp sugar",
+          "Freshly ground black pepper",
           "Salt"
         ]
       }
     ],
     steps: [
       {
-        title: "Prep.",
+        title: "Prep",
         items: [
-          "Hak løg og hvidløg fint",
-          "Riv citronskal",
-          "Hak persille fint",
-          "Blend 1/3-1/2 af kikærterne med lidt kikærtevand",
-          "Blend tomaterne med alt saft fra dåsen"
+          "Finely chop the onion and garlic",
+          "Grate the lemon zest",
+          "Finely chop the parsley",
+          "Blend 1/3-1/2 of the chickpeas with a little of their liquid",
+          "Blend the tomatoes with all the juice from the can"
         ]
       },
       {
-        title: "Tomatsauce",
+        title: "Tomato sauce",
         items: [
-          "Opvarm 2 spsk. olie i sautépande over medium høj varme (7 ud af 9).",
-          "Steg løg og hvidløg indtil løg er bløde og gennemsigtige, 3–5 minutter.",
-          "Krydr med salt",
-          "Tilsæt blendede tomater; bring til kogepunktet.",
-          "Lad reducere med 25%-50%; 10-20 minutter",
-          "Tilsæt blendede kikærter og hele kikærter",
-          "Rør godt sammen",
-          "Krydr med salt, peber og sukker"
+          "Heat 2 tbsp oil in a sauté pan over medium-high heat (7 out of 9).",
+          "Cook the onion and garlic until the onion is soft and translucent, 3–5 minutes.",
+          "Season with salt",
+          "Add the blended tomatoes and bring to the boil.",
+          "Reduce by 25%-50%, 10-20 minutes",
+          "Add the blended chickpeas and the whole chickpeas",
+          "Stir well",
+          "Season with salt, pepper and sugar"
         ]
       },
       {
-        title: "Kog pasta",
+        title: "Cook the pasta",
         items: [
-          "Sæt vand over med 1% salt. Dvs. 1 liter vand 10 g salt.",
-          "Kog pastaen 2 minutter mindre end hvad der står på pakken",
-          "Tag 100-200 ml pastakogevand fra",
-          "Dræn pasta"
+          "Bring water with 1% salt to the boil, i.e. 10 g salt per litre of water.",
+          "Cook the pasta 2 minutes less than the packet says",
+          "Reserve 100-200 ml of pasta water",
+          "Drain the pasta"
         ]
       },
       {
-        title: "Samle retten",
+        title: "Bring it together",
         items: [
-          "Overfør pasta til tomatsaucen.",
-          "Tilsæt 2 spsk. olivenolie",
-          "Kog under kraftig omrøring og tilsæt lidt pastavand hvis nødvendigt, indtil saucen er cremet og dækker pastaen, ca. 1 minut.",
-          "Fjern fra varmen; tilsæt citronskal og persille.",
-          "Server med parmesan og/eller gremolata"
+          "Transfer the pasta to the tomato sauce.",
+          "Add 2 tbsp olive oil",
+          "Cook, stirring vigorously and adding a little pasta water if needed, until the sauce is creamy and coats the pasta, about 1 minute.",
+          "Remove from the heat and add the lemon zest and parsley.",
+          "Serve with Parmesan and/or gremolata"
         ]
       }
     ]
   },
   {
     id: "biang-biang",
-    title: "Biang Biang Nudler",
+    title: "Biang Biang Noodles",
     emoji: "🍜",
-    category: "Asiatisk",
-    serves: "7 nudler",
+    category: "Asian",
+    serves: "7 noodles",
     url: "https://duffau.github.io/recipes/biang-biang/",
     ingredients: [
       {
         items: [
-          "250 g Hvedemel (Almindeligt) – 100% bagerprocent",
-          "130 g Vand – 52% bagerprocent",
-          "3 g Fint salt – ~1% bagerprocent",
-          "Solsikkeolie til at dække dejen"
+          "250 g all-purpose flour – 100% baker’s percentage",
+          "130 g water – 52% baker’s percentage",
+          "3 g fine salt – ~1% baker’s percentage",
+          "Sunflower oil for coating the dough"
         ]
       }
     ],
     steps: [
       {
-        title: "Lav dej",
+        title: "Make the dough",
         items: [
-          "Bland salt og mel",
-          "Tilføj vand gradvist mens du blander i en ensrettet cirkulær bevægelse",
-          "Ælt dejen let indtil den er ensartet",
-          "Lad hvile dækket i 15-20 minutter for at lade dejen hydrere fuldt ud",
-          "Ælt dejen i 5 minutter",
-          "Lad hvile dækket i 10 minutter",
-          "Rul dejen ud til en cylinder med en diameter på 2,5 cm",
-          "Skær i 7 cylindre af 6,4 cm længde",
-          "Rul hver af de 7 cylindre ud til rektangler på 5cm x 10cm x 1cm",
-          "Dæk hvert rektangel med solsikkeolie",
-          "Lad hvile dækket under husholdningsfilm i 30-60 minutter"
+          "Mix the salt and flour",
+          "Gradually add the water while stirring in one circular direction",
+          "Knead the dough lightly until uniform",
+          "Let it rest, covered, for 15-20 minutes so the dough fully hydrates",
+          "Knead the dough for 5 minutes",
+          "Let it rest, covered, for 10 minutes",
+          "Roll the dough into a cylinder 2.5 cm in diameter",
+          "Cut into 7 pieces, each 6.4 cm long",
+          "Roll each of the 7 pieces out into a 5 cm x 10 cm x 1 cm rectangle",
+          "Coat each rectangle with sunflower oil",
+          "Let them rest under cling film for 30-60 minutes"
         ]
       },
       {
-        title: "Stræk nudler og tilbered",
+        title: "Stretch and cook the noodles",
         items: [
-          "Bring 2 l vand til kogepunktet",
-          "Stræk nudler ved at holde et fast greb i hver ende og sving op og ned",
-          "Dump nudler ned i kogende vand",
-          "Tag nudler op efter 3-5 min eller når de flyder på overfladen"
+          "Bring 2 litres of water to the boil",
+          "Stretch the noodles by holding each end firmly and swinging up and down",
+          "Drop the noodles into the boiling water",
+          "Lift the noodles out after 3-5 min, or when they float to the surface"
         ]
       }
     ]
   },
   {
     id: "pad-kra-pao",
-    title: "Pad Kra-Pao",
+    title: "Pad Kra Pao",
     emoji: "🌶️",
-    category: "Asiatisk",
+    category: "Asian",
     serves: "4",
     url: "https://duffau.github.io/recipes/pad-kra-pao/",
     ingredients: [
       {
         items: [
-          "400g Hakket Svinekød",
-          "1 bundt Thai basilikum eller alm. Basilikum",
-          "6-8 fed hvidløg afskallet",
-          "1-2 Thai chili (substituer med mildere chili eller rød peberfrugt for mildere styrke)",
-          "1 Skalotteløg eller 1/4 Rødløg",
-          "2 tsk sukker",
-          "1 spsk. Soyasauce",
-          "2 spsk. Fiskesauce",
-          "2 tsk. Østerssauce",
-          "2 tsk. Mørk Soya (valgfri – mest for farven)"
+          "400 g ground pork",
+          "1 bunch Thai basil or regular basil",
+          "6-8 garlic cloves, peeled",
+          "1-2 Thai chilies (use a milder chili or red bell pepper for less heat)",
+          "1 shallot or 1/4 red onion",
+          "2 tsp sugar",
+          "1 tbsp soy sauce",
+          "2 tbsp fish sauce",
+          "2 tsp oyster sauce",
+          "2 tsp dark soy sauce (optional – mostly for colour)"
         ]
       }
     ],
     steps: [
       {
-        title: "Prep. grøntsager",
+        title: "Prep the vegetables",
         items: [
-          "Hak groft: hvidløg, chili og løg",
-          "Kom hvidløg, chili og løg i en minihakker eller morter",
-          "Tilsæt 2 tsk sukker",
-          "Hak eller knus de aromatiske grøntsager til en fin mos"
+          "Roughly chop the garlic, chili and onion",
+          "Put the garlic, chili and onion in a mini chopper or mortar",
+          "Add 2 tsp sugar",
+          "Chop or pound the aromatics to a fine paste"
         ]
       },
       {
-        title: "Prep. sauce",
-        items: ["Bland Soyasauce, Fiskesauce og Østerssauce"]
+        title: "Prep the sauce",
+        items: ["Mix the soy sauce, fish sauce and oyster sauce"]
       },
       {
-        title: "Prep. basilikum",
-        items: ["Skyl og pluk en håndfuld basilikumblade"]
+        title: "Prep the basil",
+        items: ["Rinse and pick a handful of basil leaves"]
       },
       {
-        title: "Tilbered",
+        title: "Cook",
         items: [
-          "Varm 3 spsk. smagsneutral olie op i en sauterpande eller wok",
-          "Steg aromatisk grøntsagsmos i et par minutter ved middel-høj varme (7 ud af 9). Steg indtil skarp løgduft aftager.",
-          "Tilsæt hakket svin",
-          "Tilsæt et nip salt",
-          "Lad svinekød stege til det er 1 min fra gennemstegt",
-          "Tilsæt sauceblanding",
-          "Rør",
-          "Tilsæt en håndfuld basilikumblade",
-          "Lad bladene falde sammen under omrøring",
-          "Server med ris og spejlæg på toppen"
+          "Heat 3 tbsp neutral oil in a sauté pan or wok",
+          "Fry the aromatic paste for a couple of minutes over medium-high heat (7 out of 9), until the sharp onion smell fades.",
+          "Add the ground pork",
+          "Add a pinch of salt",
+          "Fry the pork until it is 1 minute from cooked through",
+          "Add the sauce mixture",
+          "Stir",
+          "Add a handful of basil leaves",
+          "Let the leaves wilt while stirring",
+          "Serve with rice and a fried egg on top"
         ]
       }
     ]
@@ -699,7 +701,7 @@ const RECIPES = [
     id: "butter-chicken",
     title: "Butter Chicken",
     emoji: "🍛",
-    category: "Asiatisk",
+    category: "Asian",
     url: "https://duffau.github.io/recipes/butter-chicken",
     credits: [
       "Matty Matheson – Simple Butter Chicken (Vice)",
@@ -708,129 +710,129 @@ const RECIPES = [
     ingredients: [
       {
         items: [
-          "6 spsk. olivenolie",
-          "5 hvidløgsfed",
-          "2 fugleøjnechilier",
-          "2 lange røde chilier",
-          "2 mellemstore løg, groft hakket",
-          "10 cm ingefær, skrællet",
+          "6 tbsp olive oil",
+          "5 garlic cloves",
+          "2 bird’s eye chilies",
+          "2 long red chilies",
+          "2 medium onions, roughly chopped",
+          "10 cm ginger, peeled",
           "125 ml ghee",
-          "3 spsk. tomatpuré",
-          "3 spsk. gurkemeje",
-          "2 spsk. chilipulver",
-          "2 spsk. garam masala",
-          "2 spsk. malet koriander",
-          "2 spsk. malet spidskommen",
-          "785 gram tomatpassata",
-          "1 spsk. tørrede bukkehornsblade",
-          "4 kyllingebryster uden ben og skind, skåret i 2,5 cm tern (omtrent 1 kilogram)",
-          "500 ml piskefløde",
-          "115 gram smør",
-          "Frisk koriander",
-          "Kogt jasminris, til servering"
+          "3 tbsp tomato paste",
+          "3 tbsp turmeric",
+          "2 tbsp chili powder",
+          "2 tbsp garam masala",
+          "2 tbsp ground coriander",
+          "2 tbsp ground cumin",
+          "785 g tomato passata",
+          "1 tbsp dried fenugreek leaves",
+          "4 boneless, skinless chicken breasts, cut into 2.5 cm cubes (about 1 kg)",
+          "500 ml heavy cream",
+          "115 g butter",
+          "Fresh cilantro",
+          "Cooked jasmine rice, to serve"
         ]
       }
     ],
     steps: [
       {
-        title: "Prep.",
-        items: ["Placér olivenolie, hvidløg, chilier, løg og ingefær i en blender og purér til det er glat."]
+        title: "Prep",
+        items: ["Put the olive oil, garlic, chilies, onions and ginger in a blender and purée until smooth."]
       },
       {
         title: "Butter chicken sauce",
         items: [
-          "Opvarm ghee i en stor støbejernsgryde over medium-høj varme (7 ud af 9).",
-          "Tilføj løgpuréen og steg, indtil blandingen mørkner let og blødgør, ca. 15 minutter.",
-          "Tilføj gurkemeje, chilipulver, garam masala, koriander og spidskommen",
-          "Tilføj tomatpuré og sauter i 5 minutter, eller indtil det er mørkt og klistret.",
-          "Tilsæt 375 ml vand. Skrab brunede stykker op fra bunden af gryden.",
-          "Rør tomatpassata og bukkehornsblade i og skru op for varmen til høj. Bring til kogepunktet, reducer derefter varmen for at opretholde en simren.",
-          "Dæk til og kog under lejlighedsvis omrøring, indtil det er tykt, ca. 1 time.",
-          "Tilføj kyllingen og kog indtil kyllingen er tilberedt, ca. 15 minutter mere.",
-          "Tilføj fløde og smør og rør.",
-          "Krydr med salt og server pyntet med frisk koriander sammen med dampet jasminris."
+          "Heat the ghee in a large cast-iron pot over medium-high heat (7 out of 9).",
+          "Add the onion purée and cook until the mixture darkens slightly and softens, about 15 minutes.",
+          "Add the turmeric, chili powder, garam masala, coriander and cumin",
+          "Add the tomato paste and sauté for 5 minutes, or until dark and sticky.",
+          "Add 375 ml water and scrape up the browned bits from the bottom of the pot.",
+          "Stir in the passata and fenugreek leaves and turn the heat up to high. Bring to the boil, then lower the heat to keep it at a simmer.",
+          "Cover and cook, stirring occasionally, until thick, about 1 hour.",
+          "Add the chicken and cook until it is done, about 15 minutes more.",
+          "Add the cream and butter and stir.",
+          "Season with salt and serve garnished with fresh cilantro, alongside steamed jasmine rice."
         ]
       }
     ]
   },
   {
     id: "japansk-karry",
-    title: "Japansk Karry",
+    title: "Japanese Curry",
     emoji: "🍛",
-    category: "Asiatisk",
+    category: "Asian",
     serves: "4",
     url: "https://duffau.github.io/recipes/japansk-karry",
     credits: ["Kenji Lopez-Alt – Japanese Curry (Kare Raisu), YouTube"],
     ingredients: [
       {
         items: [
-          "4 spsk. smør eller olie",
-          "450 g kyllingebryst, skåret i stykker á ca. 4 cm",
-          "1/2 stort løg, skåret i skiver á ca. 1,5 cm",
-          "3-4 fed hvidløg, finthakket",
-          "1 cm frisk ingefær, finthakket",
-          "2-3 spsk. japansk karrypulver (S&B), masaman karrypulver eller anden gul karrypulver",
-          "4 spsk. mel",
-          "1 liter kyllingebouillon eller vand",
-          "1 stor kartoffel, skrællet og skåret i stykker á ca. 4 cm",
-          "1 stor gulerod, skrællet og skåret i stykker á ca. 4 cm",
-          "1 spsk. honning",
-          "1 dl rosiner",
-          "2,5 dl (frosne) grønne ærter",
+          "4 tbsp butter or oil",
+          "450 g chicken breast, cut into ~4 cm pieces",
+          "1/2 large onion, cut into ~1.5 cm slices",
+          "3-4 garlic cloves, finely chopped",
+          "1 cm fresh ginger, finely chopped",
+          "2-3 tbsp Japanese curry powder (S&B), massaman curry powder or another yellow curry powder",
+          "4 tbsp flour",
+          "1 litre chicken stock or water",
+          "1 large potato, peeled and cut into ~4 cm pieces",
+          "1 large carrot, peeled and cut into ~4 cm pieces",
+          "1 tbsp honey",
+          "1 dl raisins",
+          "2.5 dl (frozen) green peas",
           "Salt",
-          "Sort eller hvid peber, friskkværnet"
+          "Freshly ground black or white pepper"
         ]
       },
       {
-        title: "Til servering",
+        title: "To serve",
         items: [
-          "Dampet hvid ris",
-          "Fintskårne forårsløg",
-          "Syltet daikon eller aubergine"
+          "Steamed white rice",
+          "Thinly sliced spring onions",
+          "Pickled daikon or eggplant"
         ]
       }
     ],
     steps: [
       {
-        title: "Prep.",
+        title: "Prep",
         items: [
-          "Skær kylling i store tern (ca. 4 cm)",
-          "Skær løg i skiver á 1,5 cm",
-          "Hak hvidløg og ingefær fint",
-          "Skræl og skær kartoffel og gulerod i store tern (ca. 4 cm)",
-          "Mål karrypulver, mel, rosiner og ærter af, så de er klar"
+          "Cut the chicken into large chunks (~4 cm)",
+          "Slice the onion into 1.5 cm slices",
+          "Finely chop the garlic and ginger",
+          "Peel the potato and carrot and cut into large chunks (~4 cm)",
+          "Measure out the curry powder, flour, raisins and peas so they’re ready"
         ]
       },
       {
         title: "Sauce",
         items: [
-          "Varm smør/olie op ved høj varme indtil det lige begynder at ryge. Skru ned til middelhøj varme.",
-          "Steg kylling under omrøring til den er let brunet (ca. 3 min.)",
-          "Tilsæt løg, krydr med salt og peber, og steg videre til løgene er bløde (ca. 3 min.)",
-          "Tilsæt hvidløg og ingefær, steg kort til det dufter (ca. 30 sek.)",
-          "Tilsæt karrypulver og rist let (ca. 30 sek.)",
-          "Tilsæt mel og rør godt rundt til alt melet er opsuget (ca. 30 sek.)",
-          "Hæld bouillon/vand i og rør, så melet opløses",
-          "Tilsæt kartofler, gulerod, honning og rosiner",
-          "Bring i kog, skru ned og lad simre let under låg til grøntsagerne er møre men ikke udkogte (ca. 10 min.)",
-          "Smag til med salt, peber og evt. ekstra honning",
-          "Rør ærter i til sidst"
+          "Heat the butter/oil over high heat until it just starts to smoke. Turn down to medium-high.",
+          "Fry the chicken, stirring, until lightly browned (~3 min)",
+          "Add the onion, season with salt and pepper, and cook until the onions are soft (~3 min)",
+          "Add the garlic and ginger and fry briefly until fragrant (~30 sec)",
+          "Add the curry powder and toast lightly (~30 sec)",
+          "Add the flour and stir well until all of it is absorbed (~30 sec)",
+          "Pour in the stock/water and stir to dissolve the flour",
+          "Add the potatoes, carrot, honey and raisins",
+          "Bring to the boil, turn down and simmer gently under a lid until the vegetables are tender but not falling apart (~10 min)",
+          "Season to taste with salt, pepper and a little more honey if needed",
+          "Stir in the peas at the end"
         ]
       },
       {
-        title: "Kog ris",
+        title: "Cook the rice",
         items: [
-          "Skyl risene godt i koldt vand",
-          "Kog ris efter pakkens anvisning (typisk 1 del ris til 1,2-1,5 dele vand)",
-          "Hold risene varme til servering"
+          "Rinse the rice well in cold water",
+          "Cook the rice according to the packet (typically 1 part rice to 1.2-1.5 parts water)",
+          "Keep the rice warm until serving"
         ]
       },
       {
-        title: "Samle retten",
+        title: "Bring it together",
         items: [
-          "Server karrysaucen varm over en portion dampet ris",
-          "Drys med tyndtskårne kinesiske purløg eller forårsløg",
-          "Server med japanske pickles (syltet daikon eller aubergine)"
+          "Serve the curry sauce hot over a portion of steamed rice",
+          "Sprinkle with thinly sliced garlic chives or spring onions",
+          "Serve with Japanese pickles (pickled daikon or eggplant)"
         ]
       }
     ]
@@ -842,19 +844,19 @@ const RECIPES = [
     category: "Sandwiches",
     url: "https://duffau.github.io/recipes/burger/",
     intro: [
-      "Det vigtigste element i en burger er bøffen. Alle kondimenter i verden kan ikke kompensere for en dårlig bøf. Burgeren er det ultimative komfort food og bør derfor være en umami-bombe, med et bagtæppe af milde, velafbalancerede smage.",
-      "Kødets kvalitet, udskæringen og fedtprocenten har stor indflydelse på hvor meget oksesmagen står frem. Brug bovklump eller tykkam (det tætteste man kommer på den amerikanske udskæring “chuck”) som hovedbestanddel, og et meget fedtholdigt stykke oksebryst for at højne fedtprocenten til minimum 20%. Undgå gaspakket oksekød fra supermarkedet – fedtprocenten er for lav, og pakningen gør kødet mere sejt.",
-      "Smash-teknikken maksimerer mængden af stegeskorpe: en kugle hakkekød presses ud på en meget varm stegeoverflade med en fast metalpalet, så man opnår optimal kontakt mellem kød og stegeoverflade.",
-      "Special sauce er den som binder hele burgeren sammen. Den vigtigste ingrediens (udover mayo) er adobo-saucen fra en dåse chipotle chilier."
+      "The most important part of a burger is the patty. No amount of condiments can make up for a bad patty. The burger is the ultimate comfort food and should be an umami bomb, set against a backdrop of mild, well-balanced flavours.",
+      "The quality of the meat, the cut and the fat percentage have a big influence on how much the beef flavour comes through. Use chuck as the main component (in Denmark, bovklump or tykkam are the closest cuts) and a very fatty piece of brisket to bring the fat up to at least 20%. Avoid gas-packed supermarket beef – the fat percentage is too low and the packaging makes the meat tougher.",
+      "The smash technique maximises the crust: a ball of ground beef is pressed out onto a very hot cooking surface with a sturdy metal spatula, giving optimal contact between the meat and the surface.",
+      "The special sauce is what ties the whole burger together. Its most important ingredient (besides mayo) is the adobo sauce from a can of chipotle chilies."
     ],
     ingredients: [
       {
         title: "Beef patties",
         items: [
-          "1000 g Bovklump/Tykkam",
-          "500 g Oksebryst",
-          "Groft salt",
-          "Peber"
+          "1000 g chuck (bovklump/tykkam)",
+          "500 g brisket",
+          "Coarse salt",
+          "Pepper"
         ]
       },
       {
@@ -862,20 +864,20 @@ const RECIPES = [
         items: [
           "120 ml mayonnaise",
           "30 ml ketchup",
-          "15 ml fint revet løg",
-          "15 ml saft fra syltede agurker (gerne med dildsmag)",
-          "10 ml adobo sauce fra dåse chipotle chilier",
-          "0.75 g selleri salt",
-          "0.75 g groft salt"
+          "15 ml finely grated onion",
+          "15 ml pickle juice (preferably dill)",
+          "10 ml adobo sauce from a can of chipotle chilies",
+          "0.75 g celery salt",
+          "0.75 g coarse salt"
         ]
       },
       {
-        title: "Udstyr",
+        title: "Equipment",
         items: [
-          "Kødhakker med 6 mm hulskive",
-          "Kul- eller gasgrill",
-          "Støbejernsplade til grill",
-          "Vinklet metalpalet min. 11 cm i bredden. Ikke bøjelig."
+          "Meat grinder with a 6 mm plate",
+          "Charcoal or gas grill",
+          "Cast-iron griddle plate for the grill",
+          "Offset metal spatula, min. 11 cm wide. Not flexible."
         ]
       }
     ],
@@ -883,19 +885,19 @@ const RECIPES = [
       {
         title: "Beef patties",
         items: [
-          "Puds alt fedt fra oksebryst.",
-          "Puds alt fedt fra bovklump/tykkammen.",
-          "Vej kød og fedt af så der er 20-25% fedt. Gem det overskydende kød.",
-          "Skær kød og fedt i 2-3 cm tern og spred ud på en bageplade.",
-          "Sæt kød- og fedttern i fryseren i 30-60 minutter, til de er overfladisk frosne.",
-          "Hak kød- og fedttern på kødhakker 2 gange med 6mm hulskive.",
-          "Form kugler af farsen på 80g-90g. Vælg en størrelse og vær konsistent.",
-          "Sæt farskugler på køl til de skal bruges."
+          "Trim all the fat from the brisket.",
+          "Trim all the fat from the chuck.",
+          "Weigh out meat and fat so the mix is 20-25% fat. Save the leftover meat.",
+          "Cut the meat and fat into 2-3 cm cubes and spread them out on a baking tray.",
+          "Put the meat and fat cubes in the freezer for 30-60 minutes, until the surface is frozen.",
+          "Grind the meat and fat cubes twice through the 6 mm plate.",
+          "Form the mince into 80-90 g balls. Pick a size and be consistent.",
+          "Refrigerate the balls until needed."
         ]
       },
       {
         title: "Special sauce",
-        items: ["Rør alle ingredienser sammen"]
+        items: ["Stir all the ingredients together"]
       }
     ]
   },
@@ -909,57 +911,57 @@ const RECIPES = [
     ingredients: [
       {
         items: [
-          "8 tykke skiver toast eller formbrød",
-          "200g Fast ost (Emmentaler, Gruyère, Cheddar el. lignende)",
-          "150g Kogt skinke",
-          "60 g Mel",
-          "60 g Smør",
-          "300-400 ml Mælk (kold)",
-          "Muskatnød",
-          "Sort peber"
+          "8 thick slices of white sandwich bread",
+          "200 g firm cheese (Emmental, Gruyère, Cheddar or similar)",
+          "150 g cooked ham",
+          "60 g flour",
+          "60 g butter",
+          "300-400 ml milk (cold)",
+          "Nutmeg",
+          "Black pepper"
         ]
       }
     ],
     steps: [
       {
-        title: "Prep.",
+        title: "Prep",
         items: [
-          "Riv ost på groft rivejern",
-          "Skær skinke i stykker som passer med brødets størrelse",
-          "Vej mel og smør af til bechamelsauce"
+          "Grate the cheese on a coarse grater",
+          "Cut the ham into pieces that match the size of the bread",
+          "Weigh out the flour and butter for the béchamel"
         ]
       },
       {
-        title: "Bechamelsauce – opbagning",
+        title: "Béchamel – the roux",
         items: [
-          "Smelt smør i gryde ved 6/9 varme",
-          "Tilsæt alt mel",
-          "Pisk",
-          "Lad mel- og smørblandingen tilberede i 5 min under omrøring",
-          "Tilsæt al den kolde mælk",
-          "Pisk alle klumper ud",
-          "Bring roligt til kogepunktet",
-          "Lad simre til ønsket tykkelse er opnået",
-          "Tag gryden af varmen"
+          "Melt the butter in a pot at 6 out of 9",
+          "Add all the flour",
+          "Whisk",
+          "Cook the flour and butter mixture for 5 min, stirring",
+          "Add all the cold milk",
+          "Whisk out all the lumps",
+          "Bring gently to the boil",
+          "Simmer until it reaches the thickness you want",
+          "Take the pot off the heat"
         ]
       },
       {
-        title: "Bechamelsauce – tilsmagning",
+        title: "Béchamel – seasoning",
         items: [
-          "Tilsæt salt, revet muskat og peber",
-          "Smag og juster"
+          "Add salt, grated nutmeg and pepper",
+          "Taste and adjust"
         ]
       },
       {
-        title: "Samle Croque Monsieur",
+        title: "Assemble the croque monsieur",
         items: [
-          "Forvarm ovn på 220°C med grill",
-          "Læg brød ud på bagerist",
-          "Læg skinke på brødskiverne",
-          "Smør bechamel ovenpå skinken",
-          "Drys revet ost udover",
-          "Læg bageplade med sølvpapir i bunden af ovnen for at opsamle ost",
-          "Bag i ~5 minutter 2/3 oppe i ovnen ved 220°C med grill"
+          "Preheat the oven to 220 °C with the grill on",
+          "Lay the bread out on an oven rack",
+          "Put the ham on the bread slices",
+          "Spread béchamel over the ham",
+          "Sprinkle the grated cheese over the top",
+          "Put a baking tray lined with foil at the bottom of the oven to catch any cheese",
+          "Bake for ~5 minutes, two-thirds of the way up the oven, at 220 °C with the grill on"
         ]
       }
     ]
@@ -968,16 +970,16 @@ const RECIPES = [
     id: "hot-sauce",
     title: "Hot Sauce",
     emoji: "🌶️",
-    category: "Saucer",
+    category: "Sauces",
     url: "https://duffau.github.io/recipes/hot-sauce/",
     ingredients: [
       {
         items: [
-          "200 g Chilier",
-          "300 ml Eddike",
-          "300 g Sukker",
-          "300 ml Vand",
-          "2 spsk. Majsstivelse (Maizena)",
+          "200 g chilies",
+          "300 ml vinegar",
+          "300 g sugar",
+          "300 ml water",
+          "2 tbsp cornstarch",
           "Salt"
         ]
       }
@@ -985,17 +987,17 @@ const RECIPES = [
     steps: [
       {
         items: [
-          "Fjern stilke fra chilier og halver",
-          "Lad lage (eddike, sukker og vand) komme i kog",
-          "Tilsæt chilier til varm lage",
-          "Lad trække i 5-10 minutter",
-          "Blend til helt jævn",
-          "Sigt",
-          "Kom tilbage i gryde",
-          "Pisk majsstivelse i en smule sovs i en skål",
-          "Tilsæt til sovsen i gryden",
-          "Bring til kogepunktet",
-          "Lad køle ned"
+          "Remove the stems from the chilies and halve them",
+          "Bring the brine (vinegar, sugar and water) to the boil",
+          "Add the chilies to the hot brine",
+          "Let them steep for 5-10 minutes",
+          "Blend until completely smooth",
+          "Strain",
+          "Return to the pot",
+          "Whisk the cornstarch into a little of the sauce in a bowl",
+          "Add it to the sauce in the pot",
+          "Bring to the boil",
+          "Let it cool"
         ]
       }
     ]
@@ -1004,139 +1006,139 @@ const RECIPES = [
     id: "salsa-verde",
     title: "Salsa Verde",
     emoji: "🫑",
-    category: "Saucer",
+    category: "Sauces",
     url: "https://duffau.github.io/recipes/salsa-verde/",
     ingredients: [
       {
         items: [
-          "Grønne tomatillos fra dåse (kan erstattes med tomater)",
-          "Grøn peberfrugt",
+          "Canned green tomatillos (can be replaced with tomatoes)",
+          "Green bell pepper",
           "Jalapeños",
-          "Løg",
-          "Hvidløg",
-          "Koriander",
+          "Onion",
+          "Garlic",
+          "Cilantro",
           "Salt"
         ]
       }
     ],
     steps: [
       {
-        title: "Prep.",
+        title: "Prep",
         items: [
-          "Fjern kerner og center fra grøn peberfrugt",
-          "Fjern skal og halver løg",
-          "Lad skallen blive på hvidløg"
+          "Remove the seeds and core from the green bell pepper",
+          "Peel and halve the onion",
+          "Leave the skin on the garlic"
         ]
       },
       {
-        title: "Tilberedning",
+        title: "Cook",
         items: [
-          "Spred grøntsager ud i et jævnt lag på bageplade",
-          "Rist alle grøntsager i ovnen på grill i ca. 10 minutter, til de er sorte på overfladen og bløde",
-          "Pil skallen af hvidløg",
-          "Kom i en blender",
-          "Tilsæt salt",
-          "Tilsæt koriander",
+          "Spread the vegetables out in an even layer on a baking tray",
+          "Roast all the vegetables under the oven grill for about 10 minutes, until blackened on the surface and soft",
+          "Peel the garlic",
+          "Put everything in a blender",
+          "Add salt",
+          "Add cilantro",
           "Blend",
-          "Hæld ud i en rygende varm pande med lidt neutral olie",
-          "Lad simre 1 min",
-          "Hæld fra",
-          "Smag til"
+          "Pour into a smoking-hot pan with a little neutral oil",
+          "Let it simmer for 1 min",
+          "Pour off",
+          "Taste and adjust"
         ]
       }
     ]
   },
   {
     id: "asiatiske-basis-saucer",
-    title: "Asiatiske Basis Saucer",
+    title: "Basic Asian Sauces",
     emoji: "🥢",
-    category: "Saucer",
+    category: "Sauces",
     url: "https://duffau.github.io/recipes/asiatiske-basis-saucer",
     intro: [
-      "Disse asiatiske saucer er et forsøg på at samle nogle grundlæggende komponenter i det kinesiske og de sydøstasiatiske køkkener. Håbet er at de kan danne grundlag for at udforske asiatiske smage og teknikker.",
-      "Alle aromatiske ingredienser så som løg, hvidløg, ingefær, chili og krydderier etc. er udeladt for at give en fleksibel base. Saucerne fungerer som de er, men det er oplagt at tilføje smagsgivere og justere blandingsforholdene for at skabe nye variationer.",
-      "Stir fry: En vigtig detalje ved soyabaserede saucer er, at de bør komme i direkte kontakt med den varme pande eller wok. Ved den høje varme sker der spontan karamelisering og Maillard-reaktioner, som udvikler dybere og mere komplekse smagsstoffer. Sørg derfor for, at panden er varm nok, før du tilsætter saucen.",
-      "Alle mængder er blandingsforhold (dele)."
+      "These Asian sauces are an attempt to collect some of the fundamental building blocks of Chinese and Southeast Asian cooking. The hope is that they can serve as a foundation for exploring Asian flavours and techniques.",
+      "All aromatics such as onion, garlic, ginger, chili and spices are left out to give a flexible base. The sauces work as they are, but it’s natural to add aromatics and adjust the ratios to create new variations.",
+      "Stir fry: an important detail with soy-based sauces is that they should come into direct contact with the hot pan or wok. At high heat, spontaneous caramelisation and Maillard reactions develop deeper, more complex flavours. So make sure the pan is hot enough before adding the sauce.",
+      "All amounts are ratios (parts)."
     ],
     ingredients: [
       {
-        title: "Kinesisk Stir Fry Sauce",
-        items: ["3 dele Let Soyasauce", "2 dele Østerssauce", "1 del Mørk Soyasauce"],
-        note: "Stir fry af alt slags kød og grøntsager. Fungerer godt til stegte ris og nudler. Udvid gerne med Shaoxing vin, sukker og sesamolie. Mørk soyasauce kan udelades for en helt basal stir fry sauce."
+        title: "Chinese stir-fry sauce",
+        items: ["3 parts light soy sauce", "2 parts oyster sauce", "1 part dark soy sauce"],
+        note: "Stir fries of all kinds of meat and vegetables. Works well for fried rice and noodles. Feel free to add Shaoxing wine, sugar and sesame oil. Leave out the dark soy for a very basic stir-fry sauce."
       },
       {
-        title: "Thai Stir Fry Sauce",
-        items: ["3 dele Fiskesauce", "2 dele Let Soyasauce", "1 del Sesamolie"],
-        note: "Stir fry af alt slags kød og grøntsager. Udvid gerne med østerssauce, sukker og/eller tamarindpaste, som er basen i den klassiske thailandske stegte nudelret “Pad Thai”."
+        title: "Thai stir-fry sauce",
+        items: ["3 parts fish sauce", "2 parts light soy sauce", "1 part sesame oil"],
+        note: "Stir fries of all kinds of meat and vegetables. Feel free to add oyster sauce, sugar and/or tamarind paste, which is the base of the classic Thai fried noodle dish “Pad Thai”."
       },
       {
-        title: "Pad Kra Pao Stir Fry Sauce",
-        items: ["2 dele Fiskesauce", "1 del Let Soyasauce", "1 del Østerssauce", "1 del Sukker", "0.5 del Mørk Soyasauce"],
-        note: "Inspireret af thairetten “Pad Kra Pao”, hvor hakket svinekød bliver glaseret i sauceblandingen og “Holy Basil” er kernearomaten. Fungerer til grøntsager, alt slags kød og andre aromater som hvidløg og ingefær."
+        title: "Pad Kra Pao stir-fry sauce",
+        items: ["2 parts fish sauce", "1 part light soy sauce", "1 part oyster sauce", "1 part sugar", "0.5 part dark soy sauce"],
+        note: "Inspired by the Thai dish “Pad Kra Pao”, where ground pork is glazed in the sauce and holy basil is the key aromatic. Works with vegetables, all kinds of meat and other aromatics like garlic and ginger."
       },
       {
-        title: "Kinesisk “Red Braised Pork” Sauce",
-        items: ["5 dele Shaoxing vin", "2 dele Sukker (karameliseret)", "2 dele Let soyasauce", "1 del Mørk soyasauce"],
-        note: "Glasering til flæsk. Vend mundrette flæskestykker i varm karamel. Tilsæt saucer. Braiser til mørt."
+        title: "Chinese “red braised pork” sauce",
+        items: ["5 parts Shaoxing wine", "2 parts sugar (caramelised)", "2 parts light soy sauce", "1 part dark soy sauce"],
+        note: "A glaze for pork belly. Toss bite-sized pieces of pork belly in hot caramel. Add the sauces. Braise until tender."
       },
       {
         title: "Barbecue",
-        items: ["2 dele Ketchup", "1 del Kecap Manis", "1 del Brun farin"],
-        note: "Barbecue af kylling og svinekød, f.eks. som glasering til spareribs."
+        items: ["2 parts ketchup", "1 part kecap manis", "1 part brown sugar"],
+        note: "Barbecued chicken and pork, e.g. as a glaze for spare ribs."
       },
       {
-        title: "Gyoza Dipping Sauce",
-        items: ["3 dele Let Soyasauce", "3 dele Sort Kinesisk Eddike", "1 del Sesamolie"],
-        note: "En syrlig sauce til at dyppe gyoza, forårsruller, dumplings og lign."
+        title: "Gyoza dipping sauce",
+        items: ["3 parts light soy sauce", "3 parts Chinese black vinegar", "1 part sesame oil"],
+        note: "A tangy sauce for dipping gyoza, spring rolls, dumplings and the like."
       },
       {
-        title: "Thai Dipping Sauce (Nam Jim Jeaw base)",
-        items: ["2 dele Tamarindpaste", "1 del Fiskesauce", "1 del Limesaft", "1 del Sukker"],
-        note: "Dip til BBQ kylling, grillet okse- og svinekød."
+        title: "Thai dipping sauce (Nam Jim Jaew base)",
+        items: ["2 parts tamarind paste", "1 part fish sauce", "1 part lime juice", "1 part sugar"],
+        note: "A dip for BBQ chicken and grilled beef and pork."
       },
       {
-        title: "Soyabaseret Vinaigrette",
-        items: ["5 dele Risvineddike", "3 dele Let soyasauce", "3 dele Sukker", "2 dele Sesamolie"],
-        note: "Dressing til salater, f.eks. “Smashed Cucumber” salat."
+        title: "Soy-based vinaigrette",
+        items: ["5 parts rice vinegar", "3 parts light soy sauce", "3 parts sugar", "2 parts sesame oil"],
+        note: "A dressing for salads, e.g. smashed cucumber salad."
       },
       {
-        title: "Fiskesaucebaseret Vinaigrette (Nuoc Cham base)",
-        items: ["2 dele Vand", "2 dele Fiskesauce", "1 del Sukker", "1 del Risvineddike", "1 del Limesaft"],
-        note: "Dip til vietnamesiske sommerruller og forårsruller, dressing til risnudelsalat."
+        title: "Fish-sauce vinaigrette (Nuoc Cham base)",
+        items: ["2 parts water", "2 parts fish sauce", "1 part sugar", "1 part rice vinegar", "1 part lime juice"],
+        note: "A dip for Vietnamese summer rolls and spring rolls, or a dressing for rice noodle salad."
       }
     ],
     steps: []
   },
   {
     id: "pizza-dej",
-    title: "Napolitansk Pizza Dej",
+    title: "Neapolitan Pizza Dough",
     emoji: "🍕",
-    category: "Bagværk",
+    category: "Baking",
     serves: "4",
     url: "https://duffau.github.io/recipes/pizza-dej/",
     intro: [
-      "Denne dej har 65% hydrering, hvilket er i den lave ende for en napolitansk pizza, men det gør dejen nemmere at arbejde med og forme."
+      "This dough has 65% hydration, which is at the low end for a Neapolitan pizza, but it makes the dough easier to work with and shape."
     ],
     ingredients: [
       {
         items: [
-          "570 g Hvedemel Tipo “00”",
-          "8 g Tørgær",
-          "17 g Salt",
-          "370 g Vand 24°C"
+          "570 g Tipo “00” wheat flour",
+          "8 g dry yeast",
+          "17 g salt",
+          "370 g water at 24 °C"
         ]
       }
     ],
     steps: [
       {
         items: [
-          "Saml ingredienser i røremaskine",
-          "Ælt i 15-20 minutter til glutenprøven bestås",
-          "Form til kugle",
-          "Lad hæve ved stuetemperatur i ~10 timer",
-          "Sæt på køl",
-          "Form 4 kugler",
-          "Sæt på køl til ibrugtagning"
+          "Combine the ingredients in a stand mixer",
+          "Knead for 15-20 minutes until it passes the windowpane test",
+          "Shape into a ball",
+          "Let it rise at room temperature for ~10 hours",
+          "Refrigerate",
+          "Shape into 4 balls",
+          "Refrigerate until ready to use"
         ]
       }
     ]
@@ -1145,41 +1147,41 @@ const RECIPES = [
     id: "scones",
     title: "Scones",
     emoji: "🧁",
-    category: "Bagværk",
+    category: "Baking",
     serves: "6-8 scones",
     url: "https://duffau.github.io/recipes/scones/",
     credits: ["Jamie Oliver – How To Make Scones"],
     ingredients: [
       {
         items: [
-          "300 g Hvedemel (Almindeligt)",
-          "150 g Smør (usaltet)",
-          "1 tsk (~2 g) Salt",
-          "4 tsk (~10 g) Bagepulver",
-          "4 tsk (~15 g) Sukker",
-          "225 g Mælk"
+          "300 g all-purpose flour",
+          "150 g butter (unsalted)",
+          "1 tsp (~2 g) salt",
+          "4 tsp (~10 g) baking powder",
+          "4 tsp (~15 g) sugar",
+          "225 g milk"
         ]
       }
     ],
     steps: [
       {
-        title: "Samle dej",
+        title: "Make the dough",
         items: [
-          "Bland tørre ingredienser",
-          "Skær koldt smør i tern",
-          "Bland smørtern og melblandingen",
-          "Tilføj mælk og tryk sammen indtil det lige netop danner en sammenhængende dej",
-          "Lad hvile i 30 minutter på køl"
+          "Mix the dry ingredients",
+          "Cut the cold butter into cubes",
+          "Rub the butter cubes into the flour mixture",
+          "Add the milk and press together until it just forms a cohesive dough",
+          "Let it rest in the fridge for 30 minutes"
         ]
       },
       {
-        title: "Form scones",
+        title: "Shape the scones",
         items: [
-          "Rul ud i 2-3 cm tykkelse",
-          "Stans scones ud",
-          "Brug helst ikke restdej efter udstansning (vil blive mindre flaky)",
-          "Pensl med smeltet smør, olivenolie, æggevask eller mælk",
-          "Bag ved 180° i 15 minutter"
+          "Roll out to 2-3 cm thick",
+          "Cut out the scones",
+          "Preferably don’t reuse the leftover dough after cutting (it will be less flaky)",
+          "Brush with melted butter, olive oil, egg wash or milk",
+          "Bake at 180 °C for 15 minutes"
         ]
       }
     ]
