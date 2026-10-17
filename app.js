@@ -13,8 +13,10 @@
   const escape = (s) =>
     String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
-  const formatTime = (mins) =>
-    mins < 60 ? `${mins} min` : `${Math.floor(mins / 60)} h${mins % 60 ? ` ${mins % 60} min` : ""}`;
+  const allItems = (groups) => groups.flatMap((g) => g.items);
+
+  const byline = (recipe) =>
+    `By <a href="${escape(recipe.url)}" target="_blank" rel="noopener">${escape(AUTHOR.name)}</a>`;
 
   function renderFilters() {
     filters.innerHTML = categories
@@ -28,7 +30,7 @@
   function matches(recipe, query) {
     if (activeCategory !== "All" && recipe.category !== activeCategory) return false;
     if (!query) return true;
-    const haystack = [recipe.title, recipe.description, recipe.category, ...recipe.ingredients].join(" ").toLowerCase();
+    const haystack = [recipe.title, recipe.category, ...allItems(recipe.ingredients)].join(" ").toLowerCase();
     return query.split(/\s+/).every((term) => haystack.includes(term));
   }
 
@@ -44,11 +46,10 @@
           <div class="card-body">
             <span class="tag">${escape(r.category)}</span>
             <h2>${escape(r.title)}</h2>
-            <p>${escape(r.description)}</p>
+            <p>By ${escape(AUTHOR.name)}</p>
             <div class="meta">
-              <span>⏱ ${formatTime(r.time)}</span>
-              <span>🍽 ${r.servings}</span>
-              <span>${escape(r.difficulty)}</span>
+              <span>🧂 ${allItems(r.ingredients).length} ingredients</span>
+              ${r.serves ? `<span>🍽 ${escape(r.serves)}</span>` : ""}
             </div>
           </div>
         </a>`
@@ -59,7 +60,15 @@
     empty.hidden = results.length > 0;
   }
 
+  const groupTitle = (g, tag) => (g.title ? `<${tag}>${escape(g.title)}</${tag}>` : "");
+  const groupNote = (g) => (g.note ? `<p class="note">${escape(g.note)}</p>` : "");
+
   function renderDetail(recipe) {
+    const stats = [
+      recipe.serves && [recipe.serves, "Serves"],
+      [allItems(recipe.ingredients).length, "Ingredients"]
+    ].filter(Boolean);
+
     detailView.innerHTML = `
       <a href="#" class="back">← All recipes</a>
       <header class="detail-header">
@@ -67,31 +76,58 @@
         <div>
           <span class="tag">${escape(recipe.category)}</span>
           <h1>${escape(recipe.title)}</h1>
-          <p class="lede">${escape(recipe.description)}</p>
+          <p class="byline">${byline(recipe)}</p>
+          ${
+            recipe.credits
+              ? `<p class="credits">Inspired by: ${recipe.credits.map(escape).join("; ")}</p>`
+              : ""
+          }
           <div class="stats">
-            <div><strong>${formatTime(recipe.time)}</strong><span>Total time</span></div>
-            <div><strong>${recipe.servings}</strong><span>Servings</span></div>
-            <div><strong>${escape(recipe.difficulty)}</strong><span>Difficulty</span></div>
+            ${stats.map(([v, label]) => `<div><strong>${escape(v)}</strong><span>${label}</span></div>`).join("")}
           </div>
         </div>
       </header>
-      <div class="detail-body">
+      ${
+        recipe.intro
+          ? `<section class="intro">${recipe.intro.map((p) => `<p>${escape(p)}</p>`).join("")}</section>`
+          : ""
+      }
+      <div class="detail-body${recipe.steps.length ? "" : " no-steps"}">
         <section class="ingredients">
           <h2>Ingredients</h2>
-          <ul>
-            ${recipe.ingredients
-              .map(
-                (item, i) =>
-                  `<li><label><input type="checkbox" id="ing-${i}"><span>${escape(item)}</span></label></li>`
-              )
-              .join("")}
-          </ul>
+          ${recipe.ingredients
+            .map(
+              (g) => `
+            ${groupTitle(g, "h3")}
+            <ul>
+              ${g.items
+                .map((item) => `<li><label><input type="checkbox"><span>${escape(item)}</span></label></li>`)
+                .join("")}
+            </ul>
+            ${groupNote(g)}`
+            )
+            .join("")}
         </section>
-        <section class="steps">
+        ${
+          recipe.steps.length
+            ? `<section class="steps">
           <h2>Method</h2>
-          <ol>${recipe.steps.map((s) => `<li>${escape(s)}</li>`).join("")}</ol>
-        </section>
-      </div>`;
+          ${recipe.steps
+            .map(
+              (g) => `
+            ${groupTitle(g, "h3")}
+            <ol>${g.items.map((s) => `<li>${escape(s)}</li>`).join("")}</ol>
+            ${groupNote(g)}`
+            )
+            .join("")}
+        </section>`
+            : ""
+        }
+      </div>
+      <p class="source">
+        Recipe by ${escape(AUTHOR.name)}. Originally published at
+        <a href="${escape(recipe.url)}" target="_blank" rel="noopener">${escape(decodeURI(recipe.url))}</a>.
+      </p>`;
   }
 
   function route() {
