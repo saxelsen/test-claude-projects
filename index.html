@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recipe Box</title>
+  <meta name="description" content="A small collection of favourite food recipes.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍲</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a href="#" class="brand">🍲 Recipe Box</a>
+      <p class="tagline">Simple, reliable recipes for every day of the week.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="list-view">
+      <div class="controls">
+        <input id="search" type="search" placeholder="Search recipes or ingredients…" aria-label="Search recipes">
+        <div id="filters" class="filters" role="group" aria-label="Filter by category"></div>
+      </div>
+      <p id="count" class="count"></p>
+      <div id="grid" class="grid"></div>
+      <p id="empty" class="empty" hidden>No recipes match your search.</p>
+    </section>
+
+    <article id="detail-view" class="detail" hidden></article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">Made with 🧡 and a well-used wooden spoon.</div>
+  </footer>
+
+  <script src="recipes.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
